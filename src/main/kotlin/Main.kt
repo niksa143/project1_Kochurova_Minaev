@@ -1,7 +1,16 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
+fun main() {
+    var r = ""
+    var c = 1
+    print("введите строку: ")
+    val input = readln()
+    println()
 
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+for(i in 0  ..  input.length-1){
+}
+    for (i in input.indices) {
+        if (i < input.lastIndex && input[i] == input[i + 1]) c++
+        else { r += input[i] + if (c > 1) "$c" else ""; c = 1 }
+    }
+
+    println(r)
 }
